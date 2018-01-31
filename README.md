@@ -16,4 +16,4 @@ plot2dFit(X, siForm, 'RANSAC homogenous LS fit');
 ```
 
 ## Disclaimer
-Error and plotting only functional on 2d data.
+`getRMSError` and plotting only functional on 2d data.
