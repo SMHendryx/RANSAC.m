@@ -85,3 +85,20 @@ function RMSError = getRMSError(points, model)
     end
     RMSError = rms(orthogErrors);
 end
+
+function plot2dFit(X, m, nameOfLine)
+    % X is the input 2d design matrix of observations:
+    % y in first column, ones in last column
+    % explanatory variable in second, and observed y in third.
+    % m are the model parameters, last element of m is the intercept
+    yHat = X(:,2:end)*m;
+    x = X(:,2);
+    y = X(:,1);
+    figure();
+    scatter(x, y);
+    hold on
+    plot(x,yHat);
+    legend('Data',nameOfLine);
+    hold off
+end
+
